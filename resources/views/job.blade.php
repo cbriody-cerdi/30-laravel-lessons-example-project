@@ -1,16 +1,12 @@
 <x-layout>
     <x-slot:heading>
-        Jobs Page
+        Job
     </x-slot:heading>
 
-    <ul>
-        @foreach ($jobs as $job)
-            <li>
-                <a href="/jobs/id">
-                    <strong>{{ $job['title'] }}</strong>: Pays {{ $job['salary'] }} per year.
-                </a>
-            </li>
-        @endforeach
-    </ul>
+    <h2 class="font-bold text-lg"> {{ $job['title'] }}</h2>
+
+    <p>
+        This job pays {{ '$' . number_format((float) $job['salary'], 2) }} per year.
+    </p>
 
 </x-layout>
