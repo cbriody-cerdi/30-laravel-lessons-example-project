@@ -2,7 +2,7 @@
     <x-slot:heading>
         Create Job
     </x-slot:heading>
-    <p>
+
 
     <form method="POST" action="/jobs" class="mx-auto mt-16 max-w-2xl sm:mt-20">
         @csrf
@@ -18,8 +18,14 @@
                             <div
                                 class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                 <input id="title" type="text" name="title" placeholder="Enter job title here"
-                                       class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"/>
+                                       class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                                       required>
                             </div>
+
+                            @error('title')
+                            <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+                            @enderror
+
                         </div>
                     </div>
 
@@ -29,12 +35,34 @@
                             <div
                                 class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                 <input id="salary" type="text" name="salary" placeholder="Enter job salary here"
-                                       class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"/>
+                                       class="block min-w-0 grow bg-white py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                                       required>
                             </div>
+
+                            @error('salary')
+                            <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+                            @enderror
+
+
                         </div>
                     </div>
 
                 </div>
+
+
+                {{--
+                                <div class="mt-10">
+                                @if($errors->any())
+                                    <ul role="list" class="mt-2 text-sm text-red-700 list-disc list-inside">
+                                        @foreach ($errors->all() as $error)
+                                            <li class="text-red-500"">{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                                </div>
+                --}}
+
+
             </div>
         </div>
 
@@ -47,6 +75,5 @@
         </div>
     </form>
 
-    </p>
 
 </x-layout>
