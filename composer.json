@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "laravel/framework": "^13.7",
         "laravel/tinker": "^3.0"
     },
@@ -88,5 +88,30 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "bin":,
+    "scripts-descriptions":,
+    "replace": {},
+    "dist": {},
+    "scripts-aliases":,
+    "source": {},
+    "default-branch":,
+    "non-feature-branches":,
+    "_comment":,
+    "repositories":,
+    "abandoned":,
+    "funding": [],
+    "archive":,
+    "readme": "",
+    "suggest": {},
+    "version": "",
+    "include-path":,
+    "provide": {},
+    "time": "",
+    "support": {},
+    "target-dir": "",
+    "php-ext": {},
+    "authors": [],
+    "homepage": "",
+    "conflict": {}
 }
