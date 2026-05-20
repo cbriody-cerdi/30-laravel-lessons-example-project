@@ -1,3 +1,4 @@
+
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
@@ -88,30 +89,5 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-    "bin":,
-    "scripts-descriptions":,
-    "replace": {},
-    "dist": {},
-    "scripts-aliases":,
-    "source": {},
-    "default-branch":,
-    "non-feature-branches":,
-    "_comment":,
-    "repositories":,
-    "abandoned":,
-    "funding": [],
-    "archive":,
-    "readme": "",
-    "suggest": {},
-    "version": "",
-    "include-path":,
-    "provide": {},
-    "time": "",
-    "support": {},
-    "target-dir": "",
-    "php-ext": {},
-    "authors": [],
-    "homepage": "",
-    "conflict": {}
+    "prefer-stable": true
 }
