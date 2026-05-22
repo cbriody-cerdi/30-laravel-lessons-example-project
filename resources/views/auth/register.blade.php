@@ -37,7 +37,7 @@
 
                     <x-form-field>
                         <x-form-label for="password_confirmation">Re-enter password</x-form-label>
-                        <x-form-input name="password_confirmation" id="password_confirmation" type="password_confirmation" required/>
+                        <x-form-input name="password_confirmation" id="password_confirmation" type="password" required/>
                         <x-form-error name="password_confirmation"/>
                     </x-form-field>
 
