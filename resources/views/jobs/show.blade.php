@@ -9,11 +9,13 @@
         This job pays {{ '$' . number_format((float) $job->salary, 2) }} per year.
     </p>
 
-    <p class="mt-4">
-        <x-button href="/jobs/{{ $job->id }}/edit">
-            Edit Job
-        </x-button>
-    </p>
+    @can('edit-job', $job)
+        <p class="mt-4">
+            <x-button href="/jobs/{{ $job->id }}/edit">
+                Edit Job
+            </x-button>
+        </p>
+    @endcan
 
 </x-layout>
 
